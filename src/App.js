@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect, useState } from "react";
+import Weather from "./components/Weather";
+import CitySelector from "./components/CitySelector";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
 
 function App() {
+  let [cityName, setCityName] = useState("istanbul");
+
+  let [weatherData, setWeatherData] = useState(null);
+
+  useEffect(() => {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=bbadcd2c819b4ceb761eb7c329eaabab&units=metric`
+    )
+      .then((response) => response.json())
+      .then((data) => setWeatherData(data));
+  }, [cityName]);
+
+  function handleChange(event) {
+    setCityName(event.target.value);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container  bg-secondary p-4  min-vh-100">
+      <Navbar />
+      <div className="row">
+        <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded min-vh-100">
+          <CitySelector handleChange={handleChange} cityName={cityName} />
+
+          <Weather cityName={cityName} weatherData={weatherData} />
+        </div>
+      </div>
     </div>
   );
 }
