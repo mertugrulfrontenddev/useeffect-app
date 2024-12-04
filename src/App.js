@@ -24,7 +24,7 @@ function App() {
   }
   return (
     <>
-      <div className="container-fluid bg-secondary  ">
+      <div className="container-fluid bg-dark  min-vh-100 ">
         <div className="row">
           <div className="col-md-4  col-sm-12 col-lg-8 mx-auto rounded g-0">
             <Navbar />

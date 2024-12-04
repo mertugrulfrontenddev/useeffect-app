@@ -3,6 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url("/public/images/bg2.jpg"); /* Set your background image */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the background image */
+  background-repeat: repeat-y; /* Ensure the background doesn't repeat */
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll if needed */
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1; /* Places the overlay behind the content */
+}
 
 .link-nav {
   color: blue !important;
