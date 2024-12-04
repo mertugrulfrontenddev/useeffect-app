@@ -23,16 +23,18 @@ function App() {
     setCityName(event.target.value);
   }
   return (
-    <div className="container  bg-secondary p-4  min-vh-50">
+    <>
       <Navbar />
-      <div className="row">
-        <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded min-vh-100">
-          <CitySelector handleChange={handleChange} cityName={cityName} />
+      <div className="container  bg-secondary p-4  min-vh-50">
+        <div className="row">
+          <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded min-vh-100">
+            <CitySelector handleChange={handleChange} cityName={cityName} />
 
-          <Weather cityName={cityName} weatherData={weatherData} />
+            <Weather cityName={cityName} weatherData={weatherData} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
