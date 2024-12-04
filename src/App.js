@@ -27,7 +27,7 @@ function App() {
       <Navbar />
       <div className="container  bg-secondary p-4">
         <div className="row">
-          <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded min-vh-50">
+          <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded">
             <CitySelector handleChange={handleChange} cityName={cityName} />
 
             <Weather cityName={cityName} weatherData={weatherData} />
