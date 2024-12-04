@@ -5,7 +5,7 @@ import Weather from "./components/Weather";
 import CitySelector from "./components/CitySelector";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 function App() {
   let [cityName, setCityName] = useState("istanbul");
 
@@ -24,13 +24,23 @@ function App() {
   }
   return (
     <>
-      <Navbar />
-      <div className="container  bg-secondary p-4 min-vh-100">
+      <div className="container-fluid bg-secondary  ">
         <div className="row">
-          <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded">
+          <div className="col-md-4  col-sm-12 col-lg-8 mx-auto rounded g-0">
+            <Navbar />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-4  col-sm-12 col-lg-8   bg-primary text-white text-center mx-auto rounded">
             <CitySelector handleChange={handleChange} cityName={cityName} />
 
             <Weather cityName={cityName} weatherData={weatherData} />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-4  col-sm-12 col-lg-8 mx-auto rounded g-0">
+            <Footer />
           </div>
         </div>
       </div>

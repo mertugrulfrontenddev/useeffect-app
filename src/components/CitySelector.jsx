@@ -1,6 +1,6 @@
 const CitySelector = ({ handleChange, cityName }) => {
   return (
-    <div className="container mb-4">
+    <div className="container mb-1 mt-1">
       <div className="card">
         <div className="card-body">
           <select
