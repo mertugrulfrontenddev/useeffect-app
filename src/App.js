@@ -24,22 +24,12 @@ function App() {
   }
   return (
     <>
-      <div className="container-fluid bg-dark  min-vh-100 ">
-        <div className="row">
-          <div className="col-md-4  col-sm-12 col-lg-8 mx-auto rounded g-0">
+      <div className="container-fluid min-vh-100 d-flex flex-column">
+        <div className="row flex-grow-1">
+          <div className="col-md-8 col-sm-12 mx-auto d-flex flex-column justify-content-between bg-primary text-white text-center rounded g-0">
             <Navbar />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4  col-sm-12 col-lg-8   bg-primary text-white text-center mx-auto rounded">
             <CitySelector handleChange={handleChange} cityName={cityName} />
-
             <Weather cityName={cityName} weatherData={weatherData} />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-4  col-sm-12 col-lg-8 mx-auto rounded g-0">
             <Footer />
           </div>
         </div>

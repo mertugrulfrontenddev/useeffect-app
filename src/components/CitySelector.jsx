@@ -2,7 +2,7 @@ const CitySelector = ({ handleChange, cityName }) => {
   return (
     <div className="container mb-1 mt-1">
       <div className="card">
-        <div className="card-body">
+        <div className="card-body ">
           <select
             className="form-select form-select-sm border-primary"
             value={cityName}
