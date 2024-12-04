@@ -23,7 +23,7 @@ function App() {
     setCityName(event.target.value);
   }
   return (
-    <div className="container  bg-secondary p-4  min-vh-100">
+    <div className="container  bg-secondary p-4  min-vh-50">
       <Navbar />
       <div className="row">
         <div className="col-md-4  col-sm-12 col-lg-8 p-3  bg-primary text-white text-center mx-auto rounded min-vh-100">
