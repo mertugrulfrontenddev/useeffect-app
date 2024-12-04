@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer class="bg-body-tertiary text-primary py-1">
-      <div class="container">
-        <div class="row g-0">
+    <footer class="bg-body-tertiary text-primary  ">
+      <div class="container ">
+        <div class="row  g-0 mt-2">
           <div class="col-md-6">
             <p>&copy; 2024 Your Website</p>
           </div>
