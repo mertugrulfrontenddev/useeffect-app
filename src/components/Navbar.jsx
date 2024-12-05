@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav class="navbar bg-body-tertiary w-100">
@@ -8,9 +10,12 @@ const Navbar = () => {
           alt=""
           style={{ width: "50px", height: "auto" }}
         />
-        <a class="navbar-brand text-primary link-nav" href="#">
+        <Link class="navbar-brand text-primary link-nav" to="/">
           WEATHER NOW
-        </a>
+        </Link>
+        <Link class="navbar-brand text-primary link-nav" to="/favoriteCities">
+          FAVORİTE CITIES
+        </Link>
       </div>
     </nav>
   );
