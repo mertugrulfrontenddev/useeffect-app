@@ -13,7 +13,9 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=bbadcd2c819b4ceb761eb7c329eaabab&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+        cityName
+      )}&appid=bbadcd2c819b4ceb761eb7c329eaabab&units=metric`
     )
       .then((response) => response.json())
       .then((data) => setWeatherData(data));

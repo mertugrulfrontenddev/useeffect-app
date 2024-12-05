@@ -9,10 +9,11 @@ const CitySelector = ({ handleChange, cityName }) => {
             onChange={(event) => handleChange(event)}
           >
             <option value="">Please Select City</option>
+            <option value="adana">Adana,Türkiye</option>
             <option value="istanbul">İstanbul,Türkiye</option>
             <option value="ankara">Ankara,Türkiye</option>
             <option value="izmir">İzmir,Türkiye</option>
-            <option value="new-york">New York,ABD</option>
+            <option value="new york city">NewYork,ABD</option>
             <option value="london">London,İngiltere</option>
             <option value="tokyo">Tokyo,Japonya</option>
             <option value="paris">Paris,Fransa</option>
