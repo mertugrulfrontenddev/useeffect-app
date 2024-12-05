@@ -18,7 +18,7 @@ const FavoriteCityItem = ({ favoriteCity }) => {
           }));
         });
     });
-  });
+  }, [favoriteCity]);
 
   return (
     <div>
