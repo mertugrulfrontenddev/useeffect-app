@@ -30,8 +30,8 @@ const FavoriteCityItem = ({ favoriteCity }) => {
               style={{ maxWidth: 60, maxHeight: 60 }}
               alt=""
             />
-            <span className="badge bg-primary fs-5">{city.cityName}</span>
-            <span className="badge bg-danger fs-5">
+            <span className="badge bg-primary">{city.cityName}</span>
+            <span className="badge bg-danger">
               Sıcaklık:
               {weatherData[city.cityName] ? (
                 weatherData[city.cityName].main.temp
@@ -39,7 +39,7 @@ const FavoriteCityItem = ({ favoriteCity }) => {
                 <p>Loading...</p>
               )}
             </span>
-            <span className="badge bg-secondary fs-5">
+            <span className="badge bg-secondary">
               Weather Forecast: {city.cityName}
             </span>
           </div>
