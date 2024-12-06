@@ -22,7 +22,7 @@ const FavoriteCitiesPage = ({ favoriteCity }) => {
               style={{ minHeight: "50vh" }}
             >
               <div className="card-body bg-white d-flex justify-content-center align-items-center">
-                <p>Henüz favori şehriniz yok.</p>
+                <p>You don't have a favorite city yet</p>
               </div>
             </div>
           </div>
