@@ -51,10 +51,6 @@ function App() {
     setCityName(event.target.value);
   }
 
-  useEffect(() => {
-    console.log("Favorite Cities Updated:", favoriteCity);
-  }, [favoriteCity]);
-
   return (
     <Router>
       <div className="container-fluid min-vh-100 d-flex flex-column">
