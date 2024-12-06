@@ -19,8 +19,8 @@ const FavoriteCityItem = ({ favoriteCity }) => {
   }, [favoriteCity]);
 
   return (
-    <div className="card">
-      <div className="card-body d-flex flex-column align-items-center gap-2">
+    <div className="card ">
+      <div className="card-body d-flex flex-column align-items-center gap-2 ">
         <img
           src="./images/meteorology.png"
           style={{ maxWidth: 60, maxHeight: 60 }}
@@ -30,9 +30,18 @@ const FavoriteCityItem = ({ favoriteCity }) => {
         <span className="badge bg-danger">
           Sıcaklık: {weatherData ? weatherData.main.temp : <p>Loading...</p>}
         </span>
-        <span className="badge bg-secondary">
-          Weather Forecast: {favoriteCity.cityName}
-        </span>
+        <div className="card d-flex flex-wrap  gap-1 p-1 bg-warning">
+          <div className="card-header">
+            <span className="text-white fw-bold">Weather Forecast</span>
+          </div>
+          <span className="badge bg-primary">
+            {weatherData ? (
+              weatherData.weather[0].description
+            ) : (
+              <p>Loading...</p>
+            )}
+          </span>
+        </div>
       </div>
     </div>
   );
