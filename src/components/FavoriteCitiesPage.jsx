@@ -21,8 +21,15 @@ const FavoriteCitiesPage = ({ favoriteCity }) => {
               className="card mb-2 flex-grow-1"
               style={{ minHeight: "50vh" }}
             >
-              <div className="card-body bg-white d-flex justify-content-center align-items-center">
-                <p>You don't have a favorite city yet</p>
+              <div className="card-body bg-white d-flex flex-column justify-content-center align-items-center">
+                <img
+                  src="./images/inbox.png"
+                  style={{ maxWidth: 80, maxHeight: 80 }}
+                  alt=""
+                />
+                <p className="badge bg-primary text-white mt-4 p-2">
+                  You don't have a favorite city yet
+                </p>
               </div>
             </div>
           </div>
