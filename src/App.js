@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FavoriteCitiesPage from "./components/FavoriteCitiesPage";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
   let favoriteCityArr = [];

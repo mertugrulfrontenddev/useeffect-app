@@ -9,7 +9,7 @@ const FavoriteCitiesPage = ({ favoriteCity }) => {
           <div key={city.cityName} className="col-12 col-sm-6 col-md-4 mt-2">
             <div className="card mb-2">
               <div className="card-body bg-white ">
-                <FavoriteCityItem favoriteCity={[city]} />
+                <FavoriteCityItem favoriteCity={city} />
               </div>
             </div>
           </div>
